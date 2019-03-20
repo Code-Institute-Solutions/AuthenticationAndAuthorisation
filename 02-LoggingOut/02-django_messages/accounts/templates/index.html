@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Django Auth</title>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">Login</a></li>
+            <li><a href="{% url 'logout' %}">Logout</a></li>
+            <li><a href="#">Register</a></li>
+            <li><a href="#">Profile</a></li>
+        </ul>
+    </nav>
+
+    <hr> {% if messages %}
+    <div>
+        {% for message in messages %} {{ message }} {% endfor %}
+    </div>
+    {% endif %}
+</body>
+
+</html>
